@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Container } from "@mui/material";
+import "./App.css";
+import { BackHand, Bookmark } from "@mui/icons-material";
+const App = () => {
+  const [count, setCount] = useState(0);
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container sx={{}}>
+      <div className="app">
+        <div className="app__top">
+          <BackHand style={{ fill: "white" }} />
+          <Bookmark style={{ fill: "white" }} />
+        </div>
+      </div>
+    </Container>
   );
-}
+};
 
 export default App;
